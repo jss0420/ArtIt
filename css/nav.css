@@ -51,7 +51,7 @@ body {
 .menu-tab.active #one {
   transform: translateY(9px) rotate(-135deg);
   transition: all .6s ease-in-out;
-  background-color: rgb(117, 143, 168);
+  background-color: rgb(0, 238, 255);
 }
 
 .menu-tab.active #two {
@@ -62,7 +62,7 @@ body {
 .menu-tab.active #three {
   transform: translateY(-9px) rotate(-45deg);
   transition: all .6s ease-in-out;
-  background-color: rgb(89, 151, 212);
+  background-color: rgb(0, 255, 242);
 }
 
 .menu-hide {

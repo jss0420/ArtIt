@@ -516,11 +516,6 @@ footer {
           margin-left: -0.8em;
           position: relative;
           top: -1px; }
-        .about .panel .links a.download:before {
-          content: "d"; }
-        .about .panel .links a.github:before {
-          margin-right: 0.4em;
-          content: "g"; }
 
 .toggle{
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);

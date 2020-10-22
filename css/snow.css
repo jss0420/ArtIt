@@ -43,6 +43,7 @@ h1 {
     font-family: Lato;
     line-height: 1.6em;
     letter-spacing: 0.1em;
+    text-align: left;
 }
 
 a,
@@ -70,6 +71,7 @@ a:visited.icon {
     left: 0;
     width: 20%;
     z-index: 999;
+    text-align: left;
 }
 
 .description p {

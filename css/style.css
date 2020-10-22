@@ -393,6 +393,7 @@ footer {
     -moz-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
     background: #F2F2F2;
+    opacity:0.9;
     background-size: 399px 357px; }
     .about .panel:before {
       border-left: 1px dashed rgba(29, 31, 39, 0.2);

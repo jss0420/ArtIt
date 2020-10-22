@@ -1,0 +1,190 @@
+/* CSS files add styling rules to your content */
+html{
+  background:rgb(32, 39, 46) url("../images/山海经-屏风.jpg");
+  background-size:cover;
+  
+}
+body {
+  background-image:url("../images/山海经-屏风.jpg");
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-position: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: flex;
+  width: 100%;
+  height:100%;
+  margin:0 auto;
+}
+
+
+.initImg{
+    width: 800px;
+    height: 800px;
+}
+.fillImg{
+    object-fit: fill;
+}
+.containImg{
+    object-fit: contain;
+}
+.coverImg{
+    object-fit: cover;
+}
+.noneImg{
+    object-fit: none;
+}
+.scaleDownImg{
+    object-fit: scale-down;
+}
+
+
+
+.card {
+  pointer-events: none;
+  transform: translateZ(0);
+  /* padding: 30=px; */
+  background-image: url("../images/paintback.PNG") ;
+  
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-position: center;
+  width: 50%;
+  height: 50%;
+  background-size:contain;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  position: relative;
+}
+
+
+
+.card:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  bottom: -200px;
+  box-shadow: 0 30px 20px rgba(61, 63, 60, 0.897);
+}
+
+
+
+
+.card .card-content {
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.card h1 {
+  transform: translateZ(100px);
+}
+
+.card p {
+  transform: translateZ(50px);
+  display: block;
+}
+
+.card p.related {
+  transform: translateZ(80px);
+  font-style: italic;
+}
+
+.card a {
+  color:rgba(185, 190, 181, 0.897);
+  pointer-events: auto;
+}
+.card img.img7 {
+  transform: translateZ(5px);
+  display: block;
+  opacity: 60%;
+}
+
+.card img.img6 {
+  transform: translateZ(20px);
+  display: block;
+}
+
+.card img.img5 {
+  transform: translateZ(35px);
+  display: block;
+}
+
+.card img.img4 {
+  transform: translateZ(50px);
+  display: block;
+}
+.card img.img3 {
+  transform: translateZ(75px);
+  display: block;
+}
+.card img.img2 {
+  transform: translateZ(90px);
+  display: block;
+  bottom:300px;
+}
+.card img.img1 {
+  transform: translateZ(90px);
+  display: block;
+}
+
+.card img.related {
+  transform: translateZ(100px);
+  /* display: block; */
+
+  animation:mymove 10s infinite;
+  animation-delay:-10s;
+
+  /*Safari 和 Chrome*/
+  -webkit-animation:mymove 10s infinite;
+  -webkit-animation-delay:-10s;
+  transform: translate3D(-50%, -120px, -1.5px) scale(1.06);
+}
+
+
+
+@keyframes mymove
+{
+    from {left:200px;}
+    to {left:0px;}
+}
+
+@-webkit-keyframes mymove /*Safari 和 Chrome*/
+{
+    from {left:200px;}
+    to {left:0px;}
+}
+
+
+.load-gate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  padding: 20px;
+}
+
+.like{ 
+  z-index: 1000;
+  float:right;
+  right:0;
+  font-size:66px;  
+  color:#ccc; 
+  cursor:pointer;
+  z-index: 1000;}
+.cs{
+  color:rgb(212, 31, 31);
+}
+

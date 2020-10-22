@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700);
+body {
+  background: black;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: flex;
+  height: 100vh;
+  font-family: "Playfair Display",georgia,serif;
+}
+
+.card {
+  pointer-events: none;
+  transform: translateZ(0);
+  padding: 30px;
+  background: black;
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  bottom: -50px;
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card .card-content {
+  margin: auto;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.card h1 {
+  transform: translateZ(100px);
+}
+
+.card p {
+  transform: translateZ(50px);
+  display: block;
+}
+
+.card p.related {
+  transform: translateZ(80px);
+  font-style: italic;
+}
+
+.card a {
+  color: #69c6b8;
+  pointer-events: auto;
+}
+

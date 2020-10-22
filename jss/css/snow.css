@@ -1,0 +1,102 @@
+html {
+    background: #010002;
+}
+body {
+    background: #000000;
+    font: normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+    background-attachment: fixed;
+}
+.img1 {
+    margin: 0 auto;
+    right: 0px;
+    top: 50px;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    position: absolute;
+}
+
+#idd {
+    width: 100%;
+    height: 100%;
+    float: center;
+    margin: 0 auto;
+    object-fit: contain;
+    position: absolute;
+
+    cursor: pointer;
+}
+#idd img {
+    display: none;
+}
+#idd:hover img {
+    display: block;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: Lato;
+    line-height: 1.6em;
+    letter-spacing: 0.1em;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+
+a:hover,
+a:visited:hover {
+    opacity: 1;
+}
+
+a.icon,
+a:visited.icon {
+    margin-right: 2px;
+    padding: 3px;
+}
+
+.description {
+    padding: 30px;
+    position: absolute;
+    top: 10%;;
+    left: 0;
+    width: 20%;
+    z-index: 999;
+}
+
+.description p {
+    font-size: 0.9em;
+}
+
+.description p + p {
+    margin-top: 20px;
+}
+
+.description p.author {
+    font-size: 0.7em;
+}
+
+.description p.author .fa-heart {
+    color: #860014;
+}
+
+hr {
+    margin: 26px 0;
+    border: 0;
+    border-top: 1px solid white;
+    background: transparent;
+    width: 25%;
+    opacity: 0.1;
+}
+
+.hide {
+    display: none;
+}

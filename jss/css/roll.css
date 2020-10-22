@@ -1,0 +1,109 @@
+html,body {
+ /* important */
+ height: 100%;
+  background-color:black;
+  /* margin: 2em; */
+}
+
+main {
+  /* important */
+  height: 100%;
+   background-color:black;
+   margin: 2em;
+ }
+ 
+.cd-fixed-bg {
+ min-height: 100%;
+ background-size: cover;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-position: center center;
+  margin: 10em;
+}
+
+img {
+  width: 100%;
+	height: 100%;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2em;
+ }
+
+.cd-fixed-bg.cd-bg-1 {
+ background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys6.jpg?v=1602312439182");
+}
+.cd-fixed-bg.cd-bg-2 {
+ background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys4.jpg?v=1602312444869");
+}
+.cd-fixed-bg.cd-bg-3 {
+ background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys2.JPG?v=1602312423024");
+}
+.cd-fixed-bg.cd-bg-4 {
+ background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys1.JPG?v=1602311744531");
+}
+.cd-fixed-bg.cd-bg-5 {
+ background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys5.JPG?v=1602312444480");
+}
+ 
+.cd-scrolling-bg {
+ min-height: 2%;
+  background-color:black;
+}
+
+.fix {
+  position: fixed;
+}
+
+
+/* ===============
+--Japan
+=============== */
+.cd-fixed-bg.Japan1 {
+  background-image: url("../images/spring/japan/20782E05-423C-4601-91BC-A1D14EB73B75.JPG");
+ }
+ .cd-fixed-bg.Japan2 {
+  background-image: url("../images/spring/japan/22722016943bf3af88d63fc450971748.jpg");
+ }
+ .cd-fixed-bg.Japan3 {
+  background-image: url("../images/spring/japan/D8F2E555-44B4-4E4E-BFB5-E37C8C7AB8BF.JPG");
+ }
+ .cd-fixed-bg.Japan4 {
+  background-image: url("../images/spring/japan/77FFB92A-285D-491F-803C-CF2454939AD0.JPG");
+ }
+ .cd-fixed-bg.Japan5 {
+  background-image: url("../images/spring/japan/DF3883B7-82BD-4600-81F5-FF67A50CCCDC.JPG");
+ }
+ .cd-fixed-bg.Japan6 {
+  background-image: url("../images/spring/japan/IMG_1504.jpg");
+ }
+ .cd-fixed-bg.Japan7 {
+  background-image: url("../images/spring/japan/IMG_1645.jpg");
+ }
+
+
+/* ===============
+--Europe
+=============== */
+.cd-fixed-bg.europe1 {
+  background-image: url("../images/winter/Europe/europe.JPG");
+ }
+ .cd-fixed-bg.europe2 {
+  background-image: url("../images/winter/Europe/neth1.JPG");
+ }
+ .cd-fixed-bg.europe3 {
+  background-image: url("../images/winter/Europe/neth2.JPG");
+ }
+ .cd-fixed-bg.europe4 {
+  background-image: url("../images/winter/Europe/sw1.JPG");
+ }
+ .cd-fixed-bg.europe5 {
+  background-image: url("../images/winter/Europe/sw2.JPG");
+ }
+ .cd-fixed-bg.europe6 {
+  background-image: url("../images/winter/Europe/IMG_1622.JPG");
+ }
+ .cd-fixed-bg.europe7 {
+  background-image: url("../images/winter/Europe/IMG_2182.JPG");
+ }

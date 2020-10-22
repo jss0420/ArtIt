@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Index</title>
+        <link rel="stylesheet" href="../css/style1.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
+
+        <link rel="stylesheet" href="../css/nav.css"/>
+        <script type="text/javascript" src="../js/nav.js"></script>
+
+        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../js/sound.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script>
+
+            $(document).on("mousemove", function (e) {
+                var ax = -($(window).innerWidth() / 2 - e.pageX) / 50;
+                var ay = ($(window).innerHeight() / 2 - e.pageY) / 200;
+
+                $(".card").attr(
+                    "style",
+                    "transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg);-webkit-transform: ro" +
+                            "tateY(" + ax + "deg) rotateX(" + ay + "deg);-moz-transform: rotateY(" + ax + "deg) rotateX(" +
+                            ay + "deg);"
+                );
+            });
+        </script>
+
+    </script>
+</head>
+
+<body>
+    <div class="menu-tab">
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+    </div>
+    <div class="menu-hide">
+        <nav>
+            <ul>
+                <li>
+                    <a href="../html/head.html">Spring</a>
+                </li>
+                <li>
+                    <a href="../html/Bamboo.html">Summer</a>
+                </li>
+                <li>
+                    <a href="../html/cotain.html">Autumn</a>
+                </li>
+                <li>
+                    <a href="../html/snow.html">Winter</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <div class="card" style="z-index:2;">
+        <div class="card-content">
+            <img
+                class="img7"
+                style="float:center;"
+                src="../images/paintback.PNG"
+                alt=""
+                height="800"
+                weight="400"/>
+        </div>
+        <div class="card-content">
+            <img
+                class="img6"
+                style="float:center;"
+                src="../images/paint6.PNG"
+                alt=""
+                height="800"
+                weight="400"/>
+        </div>
+
+        <div class="card-content">
+            <img
+                class="img5"
+                style="float:center;position:related;"
+                src="../images/paint5.PNG"
+                alt=""
+                height="800"
+                weight="390"/>
+
+        </div>
+
+        <div class="card-content">
+            <img
+                class="img4"
+                style="float:center;position:related;"
+                src="../images/paint4.PNG"
+                alt=""
+                height="800"
+                weight="380"/>
+
+        </div>
+
+        <div class="card-content">
+            <img
+                class="img3"
+                style="float:center;position:related;"
+                src="../images/paint3.PNG"
+                alt=""
+                height="800"
+                weight="370"/>
+
+        </div>
+
+        <div class="card-content">
+            <img
+                class="img2"
+                style="float:center;position:related;"
+                src="../images/paint2.PNG"
+                alt=""
+                height="800"
+                weight="370"/>
+
+        </div>
+
+        <div class="card-content">
+            <img
+                class="img1"
+                style="float:center;position:related;bottom:100px;"
+                src="../images/paint1.PNG"
+                alt=""
+                height="800"
+                weight="370"/>
+
+        </div>
+
+    </div>
+
+    <div id="container" class="wrapper">
+
+        <ul
+            id="scene"
+            class="scene unselectable"
+            data-friction-x="0.1"
+            data-friction-y="0.1"
+            data-scalar-x="25"
+            data-scalar-y="15"></ul>
+        <section id="about" class="wrapper about hide accelerate">
+            <div class="cell accelerate">
+                <div class="cables center accelerate">
+                    <div class="panel accelerate">
+                        <header>
+                            <h1>
+                                <em>Sishi Ji</em>
+                            </h1>
+                        </header>
+                        <p>I am a graduate student majoring in information science.
+                        </p>
+                        <p>This is a website I developed for fun.
+                        </p>
+                        <p>Hoping to combine the art I love with my major.
+                        </p>
+                        <p>I will continue to update and optimize this website.</p>
+
+                        <div class="social">
+                            <a href="https://www.instagram.com/Sishi_ji/" data-show-count="false">InsFollow
+                                <span class="handle">@Sishi_ji</span></a>
+                        </div>
+
+                        <ul class="links">
+                            <li>
+                                <a class="download" href="https://www.linkedin.com/in/sishiji469630/">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a class="github" target="_blank" href="#">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        
+        <button id="toggle" class="toggle i">
+            <div class="cross">
+                <div class="x"></div>
+                <div class="y"></div>
+            </div>
+        </button>
+        <div id="prompt" class="wrapper prompt hide accelerate">
+            <div class="cell accelerate">
+                <div class="panel center unselectable accelerate">
+                    <button id="dismiss" class="dismiss">
+                        <div class="cross">
+                            <div class="x"></div>
+                            <div class="y"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/libraries.min.js"></script>
+    <script src="../js/jquery.parallax.js"></script>
+
+    <script>
+        // jQuery Selections
+        var $html = $('html'),
+            $container = $('#container'),
+            $prompt = $('#prompt'),
+            $toggle = $('#toggle'),
+            $about = $('#about'),
+            $scene = $('#scene');
+
+        // Hide browser menu.
+        (function () {
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+            }, 0);
+        })();
+
+        // Setup FastClick.
+        FastClick.attach(document.body);
+
+        // Add touch functionality.
+        if (Hammer.HAS_TOUCHEVENTS) {
+            $container.hammer({drag_lock_to_axis: true});
+            _.tap($html, 'a,button,[data-tap]');
+        }
+
+        // Add touch or mouse class to html element.
+        $html.addClass(
+            Hammer.HAS_TOUCHEVENTS
+                ? 'touch'
+                : 'mouse'
+        );
+
+        // Resize handler.
+        (resize = function () {
+            $scene[0].style.width = window.innerWidth + 'px';
+            $scene[0].style.height = window.innerHeight + 'px';
+            if (!$prompt.hasClass('hide')) {
+                if (window.innerWidth < 600) {
+                    $toggle.addClass('hide');
+                } else {
+                    $toggle.removeClass('hide');
+                }
+            }
+        })();
+
+        // Attach window listeners.
+        window.onresize = _.debounce(resize, 200);
+        window.onscroll = _.debounce(resize, 200);
+
+        function showDetails() {
+            $about.removeClass('hide');
+            $toggle.removeClass('i');
+        }
+
+        function hideDetails() {
+            $about.addClass('hide');
+            $toggle.addClass('i');
+        }
+
+        // Listen for toggle click event.
+        $toggle.on('click', function (event) {
+            $toggle.hasClass('i')
+                ? showDetails()
+                : hideDetails();
+        });
+
+        // Pretty simple huh?
+        $scene.parallax();
+
+        // Check for orientation support.
+        setTimeout(function () {
+            if ($scene.data('mode') === 'cursor') {
+                $prompt.removeClass('hide');
+                if (window.innerWidth < 600) 
+                    $toggle.addClass('hide');
+                $prompt.on('click', function (event) {
+                    $prompt.addClass('hide');
+                    if (window.innerWidth < 600) {
+                        setTimeout(function () {
+                            $toggle.removeClass('hide');
+                        }, 1200);
+                    }
+                });
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>

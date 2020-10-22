@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SIJ22</title>
+    <link rel="stylesheet" href="../css/Bamboo.css" />
+  <link rel="stylesheet" type="text/css" href="../css/loader.css"/>
+
+
+  <script type="text/javascript">
+    var pageHeight = document.documentElement.clientHeight,
+    pageWidth = document.documentElement.clientWidth;
+    var loadingTop = pageHeight > 61 ? (pageHeight - 61) / 2 : 0,
+    loadingLeft = pageWidth > 215 ? (pageWidth - 215) /2 : 0;
+
+
+
+    var loadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + pageHeight + 
+    'px;top:0; background:black; '+
+    'opacity:1;filter:alpha(opacity=80);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + loadingLeft + 
+    'px; top:' + loadingTop + 
+    'px; width: 200%; height: 200%; background-size: 360px 360px; background:black url(../images/loadingframe.gif) no-repeat; color: white;"></div></div>';
+    
+    
+    document.documentElement.style.overflowY = 'hidden';
+    document.write(loadingHtml);
+    document.onreadystatechange = completeLoading;
+    function completeLoading() {
+    if (document.readyState == "complete") {
+    var loadingMask = document.getElementById('loadingDiv');
+    loadingMask.parentNode.removeChild(loadingMask);
+    document.documentElement.style.overflowY = 'scroll';
+     }
+    }
+    </script>
+    
+  </head>
+  <body>
+
+    <div class="fix">
+      <a href="../html/index.html">
+    <img style="float:left; position: relative;"
+      src="../images/arrow.PNG"
+      alt="left"
+      height="70"
+      weight="70"
+      align="left"
+  /></a>
+    </div>
+    <div class="containerx">
+        
+        <a href="../html/index.html"><img style="
+            top:350px;
+            width: 20%;
+            height: 30%;
+            background-size: 50px 60px;
+            position: absolute;left: 70%;" src="../images/ship.PNG"></a>
+
+<img style="
+            width: 25%;
+            height: 70%;
+            background-size: 50px 60px;
+            position: absolute;left: 75%;" src="../images/shici.PNG">
+
+    <div class="box">
+        <img src="https://s14.postimg.cc/3ny2wo3ch/clouds.png" class="cloudmiddle">
+        <img src="https://s14.postimg.cc/3ny2wo3ch/clouds.png" class="cloudback">
+
+        <img src="../images/11.svg" class="background">
+        <img src="../images/1111.svg" class="background1">
+        <img src="../images/22.svg" class="middle">
+      
+      <img src="../images/111.svg" class="background">
+        <img src="../images/222.svg" class="middle">
+        <img src="../images/333.svg" class="front1">
+      
+        <img src="../images/moon.svg" class="fixbackground">
+        <img src="../images/wave1.PNG" style="
+        top:200px;
+        width: 70%;
+        height: 80%;
+        position: absolute;">
+
+         <img src="../images/wave2.PNG" class="wave">
+        
+    </div>
+      
+</div>
+    
+ 
+  </body>
+</html>

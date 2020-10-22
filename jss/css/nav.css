@@ -1,0 +1,116 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.text {
+
+  width: 100%;
+  text-align: left;
+  margin-top: 10%;
+  font-size: 3em;
+  color: rgb(146, 146, 146);
+  font-weight: 800;
+}
+
+.menu-tab {
+  width: 90px;
+  height: 70px;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  transition: all .6s ease-in-out;
+  /*end of div*/
+}
+
+.menu-tab div {
+  border-radius:3px;
+  width: 33px;
+  height: 4px;
+  background-color:  rgb(185, 207, 207);
+  display: block;
+  margin: 5px 28px;
+  transition: all .6s ease-in-out;
+}
+
+.menu-tab div:nth-child(1) {
+  margin-top: 20px;
+}
+
+/*end of menu-tab*/
+.menu-tab.active {
+
+  border-radius:10px;
+  left: 245px;
+  transition: all 600ms ease-in-out;
+  background-color: transparent;
+}
+
+.menu-tab.active #one {
+  transform: translateY(9px) rotate(-135deg);
+  transition: all .6s ease-in-out;
+  background-color: rgb(117, 143, 168);
+}
+
+.menu-tab.active #two {
+  opacity: 0.5;
+  transition: .4s ease;
+}
+
+.menu-tab.active #three {
+  transform: translateY(-9px) rotate(-45deg);
+  transition: all .6s ease-in-out;
+  background-color: rgb(89, 151, 212);
+}
+
+.menu-hide {
+
+  border-radius:3px;
+  width: 245px;
+  left: -245px;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  transition: all .6s ease-in-out;
+  /*end of nav*/
+}
+
+.menu-hide nav {
+  /*end of ul*/
+}
+
+.menu-hide nav ul {
+  /*end of li*/
+}
+
+.menu-hide nav ul li {
+  height: 70px;
+  list-style-type: none;
+  text-align: left;
+  line-height: 70px;
+  transition: all .5s ease;
+}
+
+.menu-hide nav ul li:hover {
+
+  border-radius:10px;
+  background-color: rgb(179, 208, 236,0.2);
+  transition: all .5s ease;
+}
+
+.menu-hide nav ul li a {
+  padding: 30px 25px;
+  text-decoration: none;
+  color: rgb(218, 218, 218);
+  font-weight: 800;
+}
+
+/*end of menu-hide*/
+.menu-hide.show {
+  left: 0px;
+  background-color: rgba(19, 19, 19, 0.9);
+  transition: all .6s ease-in-out;
+}

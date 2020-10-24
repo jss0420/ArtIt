@@ -1,15 +1,13 @@
 html,body {
  /* important */
  height: 100%;
-  background-color:black;
-  /* margin: 2em; */
+  background-color: #efefef;
 }
 
 main {
   /* important */
   height: 100%;
-   background-color:black;
-   margin: 2em;
+   background-color:transparent;
  }
  
 .cd-fixed-bg {
@@ -18,7 +16,7 @@ main {
  background-attachment: fixed;
  background-repeat: no-repeat;
  background-position: center center;
-  margin: 10em;
+  margin: 3em;
 }
 
 img {
@@ -31,25 +29,85 @@ img {
   margin: 2em;
  }
 
-.cd-fixed-bg.cd-bg-1 {
- background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys6.jpg?v=1602312439182");
+.cd-fixed-bg.cd-bg-y1 {
+ background-image: url("../images/summer/yellow-stone/IMG_1691.JPG");
+ background-size: contain;
 }
-.cd-fixed-bg.cd-bg-2 {
- background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys4.jpg?v=1602312444869");
+.cd-fixed-bg.cd-bg-y2 {
+ background-image: url("../images/summer/yellow-stone/ys1.JPG");
+ background-size: contain;
 }
-.cd-fixed-bg.cd-bg-3 {
- background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys2.JPG?v=1602312423024");
+.cd-fixed-bg.cd-bg-y3 {
+ background-image: url("../images/summer/yellow-stone/ys2.JPG");
+ background-size: contain;
 }
-.cd-fixed-bg.cd-bg-4 {
- background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys1.JPG?v=1602311744531");
+.cd-fixed-bg.cd-bg-y4 {
+ background-image: url("../images/summer/yellow-stone/ys3.JPG");
+ background-size: contain;
 }
-.cd-fixed-bg.cd-bg-5 {
- background-image: url("https://cdn.glitch.com/a4c80e46-9da2-4fa7-b97c-a5eae9036efb%2Fys5.JPG?v=1602312444480");
+.cd-fixed-bg.cd-bg-y5 {
+ background-image: url("../images/summer/yellow-stone/ys4.JPG");
+ background-size: contain;
 }
+.cd-fixed-bg.cd-bg-y6 {
+ background-image: url("../images/summer/yellow-stone/ys5.JPG");
+ background-size: contain;
+}
+.cd-fixed-bg.cd-bg-y7 {
+ background-image: url("../images/summer/yellow-stone/ys6.JPG");
+ background-size: contain;
+}
+
+
+
+.cd-fixed-bg.cd-bg-a1 {
+  background-image: url("../images/summer/Antelope-Canyon/val1.JPG");
+  background-size: contain;
+ }
+ .cd-fixed-bg.cd-bg-a2 {
+  background-image: url("../images/summer/Antelope-Canyon/val2.JPG");
+  background-size: contain;
+ }
+ .cd-fixed-bg.cd-bg-a3 {
+  background-image: url("../images/summer/Antelope-Canyon/val3.jpg");
+  background-size: contain;
+ }
+ .cd-fixed-bg.cd-bg-a4 {
+  background-image: url("../images/summer/Antelope-Canyon/val4.jpg");
+  background-size: contain;
+ }
+ .cd-fixed-bg.cd-bg-a5 {
+  background-image: url("../images/summer/Antelope-Canyon/val5.jpg");
+  background-size: contain;
+ }
+
+
+ .cd-fixed-bg.cd-bg-d1 {
+  background-image: url("../images/summer/death-vally/death1.jpg");
+  background-size: contain;
+ }
+ .cd-fixed-bg.cd-bg-d4 {
+  background-image: url("../images/summer/death-vally/IMG_0473.jpg");
+  background-size: contain;
+ }
+
+
+ .cd-fixed-bg.cd-bg-g1 {
+  background-image: url("../images/winter/grand-canyon/grand1.JPG");
+  background-size: contain;
+ }
+ .cd-fixed-bg.cd-bg-g2 {
+  background-image: url("../images/winter/grand-canyon/IMG_0352.jpg");
+  background-size: contain;
+ }
+ .cd-fixed-bg.cd-bg-g3 {
+  background-image: url("../images/winter/grand-canyon/IMG_0364.JPG");
+  background-size: contain;
+ }
  
 .cd-scrolling-bg {
  min-height: 2%;
-  background-color:black;
+  background-color:transparent;
 }
 
 .fix {
@@ -62,24 +120,35 @@ img {
 =============== */
 .cd-fixed-bg.Japan1 {
   background-image: url("../images/spring/japan/20782E05-423C-4601-91BC-A1D14EB73B75.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.Japan2 {
   background-image: url("../images/spring/japan/22722016943bf3af88d63fc450971748.jpg");
+  background-size: contain;
  }
  .cd-fixed-bg.Japan3 {
   background-image: url("../images/spring/japan/D8F2E555-44B4-4E4E-BFB5-E37C8C7AB8BF.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.Japan4 {
   background-image: url("../images/spring/japan/77FFB92A-285D-491F-803C-CF2454939AD0.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.Japan5 {
-  background-image: url("../images/spring/japan/DF3883B7-82BD-4600-81F5-FF67A50CCCDC.JPG");
+  background-image: url("../images/spring/japan/IMG_2052.jpg");
+  background-size: contain;
  }
  .cd-fixed-bg.Japan6 {
   background-image: url("../images/spring/japan/IMG_1504.jpg");
+  background-size: contain;
  }
  .cd-fixed-bg.Japan7 {
   background-image: url("../images/spring/japan/IMG_1645.jpg");
+  background-size: contain;
+ }
+ .cd-fixed-bg.Japan8 {
+  background-image: url("../images/spring/japan/IMG_7344.JPG");
+  background-size: contain;
  }
 
 
@@ -88,22 +157,29 @@ img {
 =============== */
 .cd-fixed-bg.europe1 {
   background-image: url("../images/winter/Europe/europe.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.europe2 {
   background-image: url("../images/winter/Europe/neth1.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.europe3 {
   background-image: url("../images/winter/Europe/neth2.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.europe4 {
   background-image: url("../images/winter/Europe/sw1.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.europe5 {
   background-image: url("../images/winter/Europe/sw2.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.europe6 {
   background-image: url("../images/winter/Europe/IMG_1622.JPG");
+  background-size: contain;
  }
  .cd-fixed-bg.europe7 {
   background-image: url("../images/winter/Europe/IMG_2182.JPG");
+  background-size: contain;
  }

@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Home | Sishi</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1">
+
+            <link rel="stylesheet" href="../css/cv.css"/>
+            <script
+                type="text/javascript"
+                src="http://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+            <script
+                type="text/javascript"
+                src="http://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+            <script
+                type="text/javascript"
+                src="http://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+            <script
+                type="text/javascript"
+                src="http://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+
+            <script type="text/javascript">
+                window._wpemojiSettings = {
+                    "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/",
+                    "ext": ".png",
+                    "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/",
+                    "svgExt": ".svg",
+                    "source": {
+                        "wpemoji": "https:\/\/themes.profteamsolutions.com\/identity-vcard\/wp-includes\/js\/wp-em" +
+                                "oji.js?ver=4.7.2",
+                        "twemoji": "https:\/\/themes.profteamsolutions.com\/identity-vcard\/wp-includes\/js\/twemo" +
+                                "ji.js?ver=4.7.2"
+                    }
+                };
+                (function (window, document, settings) {
+                    var src,
+                        ready,
+                        ii,
+                        tests;
+
+                    /*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+                    var canvas = document.createElement('canvas');
+                    var context = canvas.getContext && canvas.getContext('2d');
+
+                    /**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji4" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+                    function browserSupportsEmoji(type) {
+                        var stringFromCharCode = String.fromCharCode,
+                            flag,
+                            flag2,
+                            technologist,
+                            technologist2;
+
+                        if (!context || !context.fillText) {
+                            return false;
+                        }
+
+                        // Cleanup from previous test.
+                        context.clearRect(0, 0, canvas.width, canvas.height);
+
+                        /*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+                        context.textBaseline = 'top';
+                        context.font = '600 32px Arial';
+
+                        switch (type) {
+                            case 'flag':
+                                /*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'U' and 'N' in them, if the browser doesn't render flag emoji
+				 * - The United Nations flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+                                context.fillText(stringFromCharCode(55356, 56826, 55356, 56819), 0, 0);
+                                if (canvas.toDataURL().length < 3000) {
+                                    return false;
+                                }
+
+                                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                                /*
+				 * Test for rainbow flag compatibility. As the rainbow flag was added out of sequence with
+				 * the usual Unicode release cycle, some browsers support it, and some don't, even if their
+				 * Unicode support is up to date.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + rainbow emoji).
+				 */
+                                context.fillText(
+                                    stringFromCharCode(55356, 57331, 65039, 8205, 55356, 57096),
+                                    0,
+                                    0
+                                );
+                                flag = canvas.toDataURL();
+
+                                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                                context.fillText(stringFromCharCode(55356, 57331, 55356, 57096), 0, 0);
+                                flag2 = canvas.toDataURL();
+
+                                return flag !== flag2;
+                            case 'emoji4':
+                                /*
+				 * Emoji 4 has the best technologists. So does WordPress!
+				 *
+				 * To test for support, try to render a new emoji (woman technologist: medium skin tone),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (woman technologist: medium skin tone + personal computer).
+				 */
+                                context.fillText(
+                                    stringFromCharCode(55357, 56425, 55356, 57341, 8205, 55357, 56507),
+                                    0,
+                                    0
+                                );
+                                technologist = canvas.toDataURL();
+
+                                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                                context.fillText(
+                                    stringFromCharCode(55357, 56425, 55356, 57341, 55357, 56507),
+                                    0,
+                                    0
+                                );
+                                technologist2 = canvas.toDataURL();
+
+                                return technologist !== technologist2;
+                        }
+
+                        return false;
+                    }
+
+                    function addScript(src) {
+                        var script = document.createElement('script');
+
+                        script.src = src;
+                        script.defer = script.type = 'text/javascript';
+                        document
+                            .getElementsByTagName('head')[0]
+                            .appendChild(script);
+                    }
+
+                    tests = Array('flag', 'emoji4');
+
+                    settings.supports = {
+                        everything: true,
+                        everythingExceptFlag: true
+                    };
+
+                    for (ii = 0; ii < tests.length; ii++) {
+                        settings.supports[tests[ii]] = browserSupportsEmoji(tests[ii]);
+
+                        settings.supports.everything = settings.supports.everything && settings.supports[tests[ii]];
+
+                        if ('flag' !== tests[ii]) {
+                            settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[tests[ii]];
+                        }
+                    }
+
+                    settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && !settings.supports.flag;
+
+                    settings.DOMReady = false;
+                    settings.readyCallback = function () {
+                        settings.DOMReady = true;
+                    };
+
+                    if (!settings.supports.everything) {
+                        ready = function () {
+                            settings.readyCallback();
+                        };
+
+                        if (document.addEventListener) {
+                            document.addEventListener('DOMContentLoaded', ready, false);
+                            window.addEventListener('load', ready, false);
+                        } else {
+                            window.attachEvent('onload', ready);
+                            document.attachEvent('onreadystatechange', function () {
+                                if ('complete' === document.readyState) {
+                                    settings.readyCallback();
+                                }
+                            });
+                        }
+
+                        src = settings.source || {};
+
+                        if (src.concatemoji) {
+                            addScript(src.concatemoji);
+                        } else if (src.wpemoji && src.twemoji) {
+                            addScript(src.twemoji);
+                            addScript(src.wpemoji);
+                        }
+                    }
+
+                })(window, document, window._wpemojiSettings);
+            </script>
+
+            <link
+                rel='stylesheet'
+                id='wp-jquery-ui-dialog-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-includes/css/jquery-ui-dialog.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='contact-form-7-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6.1'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='rs-plugin-settings-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.1.5'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='style-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/style.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='identity-icons-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/styles/identity-icons.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='identity-usage-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/styles/identity-usage.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='plugins-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/styles/identity/plugins.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='bootstrap-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/styles/identity/bootstrap.min.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='identity-style-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/styles/identity/style.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='style-responsive-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/styles/identity/style-responsive.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='identity-custom-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/identity-styles.css?ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='js_composer_front-css'
+                href='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=4.9'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='siteFont-css'
+                href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C200%2C200italic%2C300italic%2C300%2C400italic%2C600%2C600italic%2C700italic%2C700%2C900%2C900italic&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='menuFont-css'
+                href='https://fonts.googleapis.com/css?family&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='headingOneFont-css'
+                href='https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='headingTwoFont-css'
+                href='https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='headingThreeFont-css'
+                href='https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='headingFourFont-css'
+                href='https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='headingFiveFont-css'
+                href='https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <link
+                rel='stylesheet'
+                id='headingSixFont-css'
+                href='https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.7.2'
+                type='text/css'
+                media='all'/>
+            <script
+                type='text/javascript'
+                src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+            <script
+                type='text/javascript'
+                src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+            <script
+                type='text/javascript'
+                src='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.1.5'></script>
+            <script
+                type='text/javascript'
+                src='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.1.5'></script>
+            <link
+                rel='https://api.w.org/'
+                href='https://themes.profteamsolutions.com/identity-vcard/?rest_route=/'/>
+            <meta name="generator" content="WordPress 4.7.2"/>
+            <style type="text/css">
+                .recentcomments a {
+                    display: inline !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+            </style>
+            <meta
+                name="generator"
+                content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+            <meta
+                name="generator"
+                content="Powered by Slider Revolution 5.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."/>
+            <style type="text/css" data-type="vc_custom-css">
+                .make-margin-bottom-zero {
+                    margin-bottom: 0;
+                }
+
+                .make-margin-top-sixtytwo {
+                    margin-top: 62px !important;
+                }
+
+                .make-margin-bottom-six {
+                    margin-bottom: 6px;
+                }
+
+                .make-margin-bottom-seventy {
+                    margin-bottom: 70px;
+                }
+
+                .make-margin-bottom-twenty {
+                    margin-left: 20px !important;
+                }
+
+                .make-margin-bottom-sixty {
+                    margin-bottom: 60px;
+                }
+
+                .identity-side-video.wpb_video_widget .wpb_wrapper iframe {
+                    height: 280px;
+                }
+
+                .make-margin-bottom-three {
+                    margin-bottom: 3px;
+                }
+
+                .make-margin-bottom-twentytwo {
+                    margin-bottom: 22px;
+                }
+                .make-margin-bottom-forty,
+                .make-margin-bottom-fourty {
+                    margin-bottom: 40px;
+                }
+
+                .make-text-align-center {
+                    text-align: center;
+                }
+
+                .make-margin-bottom-sixtytwo {
+                    margin-bottom: 62px;
+                }
+
+                .make-margin-bottom-eight {
+                    margin-bottom: 8px;
+                }
+
+                .make-margin-bottom-eighteen {
+                    margin-bottom: 18px;
+                }
+                .make-margin-bottom-thirteen {
+                    margin-bottom: 13px;
+                }
+
+                .make-button-margin .btn.btn-primary {
+                    margin-left: 20px !important;
+                }
+
+                .vc_column-inner.vc_custom_1450395668012 {
+                    padding: 0 !important;
+                }
+            </style>
+            <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1442957040306{background-color: #474d5d !important;}.vc_custom_1442957064511{background-color: #efefef !important;}.vc_custom_1442957099879{background-color: #efefef !important;}.vc_custom_1442957123992{background-color: #474d5d !important;}.vc_custom_1442957151209{background-color: #efefef !important;}.vc_custom_1442958156357{background-image: url(https://themes.profteamsolutions.com/identity-vcard/wp-content/uploads/2014/09/parallax3.jpg?id=103) !important;}.vc_custom_1442957184499{background-color: #474d5d !important;}.vc_custom_1450396522267{margin-bottom: 0px !important;background-color: #efefef !important;}.vc_custom_1450399897560{margin-top: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1416731840698{margin-bottom: 50px !important;}.vc_custom_1416738722275{margin-bottom: 0px !important;}.vc_custom_1450395829266{margin-bottom: 0px !important;}.vc_custom_1450390061407{margin-bottom: 0px !important;}.vc_custom_1450395768414{margin-bottom: 0px !important;}.vc_custom_1450395668012{margin-top: 0px !important;}.vc_custom_1450399573245{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	
+</head>
+<!-- Head Section End
+================================================== -->
+
+
+
+
+<!-- Body Section Started
+================================================== -->
+<body class="page-template page-template-homepage page-template-homepage-php page page-id-21 single-page identity-mobile-hide-animation identity-pc-device  wpb-js-composer js-comp-ver-4.9 vc_responsive">
+
+	<!-- Pre-loader -->
+	<div class="mask">
+		<div id="intro-loader">
+		</div>
+	</div>
+	<!-- End Pre-loader -->
+
+
+
+	<!-- Navbar -->
+		<!-- Navigation -->
+		<div class="navbar navbar-fixed-top ">
+			<nav id="navigation-sticky" class="trans-nav" style="background: rgba(0,0,0,0.5);">
+				<!-- Navigation Inner -->
+				<div class="container inner">
+					<!-- Mobile Menu Button -->
+					<a class="mobile-nav-button"><i class="fa fa-bars"></i></a>
+					<!-- Navigation Menu -->
+					<div class="nav-menu">
+						<div class="nav">
+							<div class="menu-identity-container"><ul id="menu-identity" class="menu nav"><li  class="menu-item menu-item-type-custom menu-item-object-custom "><a href="#about">Home</a></li>
+<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown-toggle nav-toggle"><a href="#about">About</a>
+
+</li>
+<li  class="menu-item menu-item-type-custom menu-item-object-custom "><a href="#skills">Skills</a></li>
+<li  class="menu-item menu-item-type-custom menu-item-object-custom "><a href="#resume">Resume</a></li>
+<li  class="menu-item menu-item-type-custom menu-item-object-custom "><a href="#Experience">Experience</a></li>
+<li  class="menu-item menu-item-type-custom menu-item-object-custom "><a href="#process">Process</a></li>
+<li  class="menu-item menu-item-type-custom menu-item-object-custom "><a href="#contact">Contact</a></li>
+</ul></div>						</div>
+					</div>
+					<!-- End Navigation Menu -->
+				</div>
+			<!-- End Navigation Inner -->
+			</nav>
+			<!-- End Navigation -->
+		</div>
+	<!-- End Navbar -->
+	
+  
+
+
+
+<!-- Page Begin
+================================================== -->
+<div class="main-container">
+					
+	<div class="main-page-column-data main-page-column-data-full">
+		<div class="get-column-container">			
+			<div class="page-content">
+
+
+                <!-- My about start -->
+				<div class = "vc_row wpb_row vc_row-fluid make-margin-bottom-zero" > <div class="wpb_column vc_column_container vc_col-sm-12">
+    <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+            <div id="about"></div>
+            <div
+                class="homepage-container-design   "
+                style="background-image:url();color:#666666;background-repeat:repeat; padding-top:50px; padding-bottom:0px; background-size:cover; background-position:top center;">
+                <div class="homepage-container-design-inner">
+
+                    <div class="section-title  text-center">
+                        <h1 style="top:30px;">ABOUT
+                            <span style="background-color: rgba(59,63,80,0.6);">ME</span>
+                        </h1>
+                    </div>
+
+                    <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="text-center">
+                                        <img src="../images/me.jpg" class="img-center img-responsive" alt="photo"/>
+                                        <div class="name-title" style="background-color: rgba(59,63,80,0.8);">
+                                            <h2 style="color:#FFF;">SISHI JI</h2>
+                                            <h5 style="color:#FFF;">PROGRAMMER</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="wpb_text_column wpb_content_element ">
+                                        <div class="wpb_wrapper">
+                                            <p
+                                                class="quoteline"
+                                                style="font-family: oswald !important; font-size: 18px !important; font-weight: normal !important;">First, solve the problem. Then, write the code.</p>
+                                            <p>Hi, my name is Sishi Ji, and I am a Senior Technical Consultant and Software
+                                                Developer from Shanghai, China.
+                                            </p>
+                                            <p>
+                                                I love painting and music, love life, and also love the computer technology I learn.
+                                                I see myself as highly motivated person with the right skill set in mind. My
+                                                main objective is to get better, by learning, seeking opportunities and
+                                                contributing.</p>
+                                        
+                                            <p class="text-right">
+                                                <a href=""><img
+                                                    class="alignnone size-full wp-image-566"
+                                                    src="../images/sign.PNG"
+                                                    alt="signature"
+                                                    width="150"
+                                                    height="50"/></a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div style="color:#333333;">
+                                        <ul class="fa-ul">
+                                            <li>
+                                                <img
+                                                    src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486836889/Logomakr_0QXVQU_re82lf.png"
+                                                    height="20"
+                                                    width="20"></img>
+                                                <strong>phone</strong>
+                                                : +1 (412)-708-4381</li>
+                                            <li>
+                                                <img
+                                                    src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486837095/Logomakr_2AxSKL_tglsyc.png"
+                                                    height="20"
+                                                    width="20"></img>
+                                                <strong>email</strong>
+                                                : jss0420@hotmail.com</li>
+                                            <li>
+                                                <img
+                                                    src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486837211/Logomakr_3vXpaw_pboxh1.png"
+                                                    height="20"
+                                                    width="20"></img>
+                                                <strong>Linkedin</strong>
+                                                : <a href="https://www.linkedin.com/in/sishiji469630/">https://www.linkedin.com/in/sishiji469630/</a>
+                                            </li>
+                                            <li>
+                                                <img
+                                                    src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486837354/Logomakr_2tqzL6_odoakg.png"
+                                                    height="20"
+                                                    width="20"></img>
+                                                <strong>address</strong>
+                                                : Pittsburgh, United States</li>
+                                        </ul>
+                                    </div>
+                                    <div class="vc_empty_space" style="height: 60px">
+                                        <span class="vc_empty_space_inner"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class = "vc_row wpb_row vc_row-fluid make-margin-bottom-zero" > <div class="wpb_column vc_column_container vc_col-sm-12">
+    <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+            <div
+                class="homepage-container-design   "
+                style="background-image:url();color:#666666;background-repeat:repeat; padding-top:40px; padding-bottom:25px; background-size:cover; background-position:top center;">
+                <div class="homepage-container-design-inner">
+                    <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="services-box">
+                                        <h4>Oracle PLSQL Developer</h4>
+                                        <div class="services-box-icon">
+                                            <img
+                                                src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486879713/Logomakr_6RnlLb_d5r2j3.png"></img>
+                                        </div>
+                                        <div class="service-box-info">
+                                            <p>
+                                                More than 5 years PLSQL programming technical consultant experience. Proficient
+                                                in SQL, JAVA, Python.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="services-box">
+                                        <h4>Maintenance</h4>
+                                        <div class="services-box-icon">
+                                            <img
+                                                src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486880099/Logomakr_8mNhIu_ixszxj.png"></img>
+                                        </div>
+                                        <div class="service-box-info">
+                                            <p>
+                                                More than five maintenance and development projects. Efficiently locate and
+                                                solve system problems.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-4">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="services-box">
+                                        <h4>CUSTOMER SUPPORT</h4>
+                                        <div class="services-box-icon">
+                                            <img
+                                                src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486880211/Logomakr_0HrMo7_mz9sfj.png"></img>
+                                        </div>
+                                        <div class="service-box-info">
+                                            <p>
+                                                Quickly understand the development and optimization needs of users. High
+                                                response rate and teamwork ability.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+    
+
+    
+        <!-- ===================================================================== -->
+
+
+        <!-- Skills start -->
+                        <div
+    class="vc_row wpb_row vc_row-fluid make-margin-bottom-zero vc_custom_1442957040306 vc_row-has-fill">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner ">
+            <div class="wpb_wrapper">
+                <div id="skills"></div>
+                <div
+                    class="homepage-container-design   "
+                    style="background-image:url();color:#666666;background-repeat:repeat; padding-top:50px; padding-bottom:5px; background-size:cover; background-position:top center;">
+                    <div class="homepage-container-design-inner">
+                        <div class="section-title  text-center">
+                            <h1 style="color:#ffffff;">MY
+                                <span style="background-color:rgba(239,239,239,0.6);">SKILLS</span>
+                            </h1>
+                        </div>
+
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid customtable" style="color:#ffffff;">
+                            <div class="wpb_column vc_column_container vc_col-sm-2">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="chart" data-percent="91">
+                                            <span class="percent" style="color:#bef147;">91</span>
+                                            <h4>Python</h4>
+                                            <p>
+                                                Multiple data analysis and machine learning project experience. Proficient in
+                                                using Pandas, Numpy, Scipy, Matplotlib, scikit-learn and other packages for data
+                                                mining and processing.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-2">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="chart" data-percent="60">
+                                            <span class="percent" style="color:#b1ec26;">95</span>
+                                            <h4>SQL</h4>
+                                            <p>
+                                                Professionally use SQL for data manipulation, integration, transmission,
+                                                visualization and other operations. He has many years of database construction,
+                                                SQL script optimization, and Oracle PL/SQL development experience.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wpb_column vc_column_container vc_col-sm-2">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="chart" data-percent="60">
+                                            <span class="percent" style="color:#e2fa5c;">80</span>
+                                            <h4>JAVA</h4>
+                                            <p>
+                                                Familiar with Java for interface API development. Proficient in using Eclipse
+                                                and completing multiple algorithms and Cloud computing projects.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wpb_column vc_column_container vc_col-sm-2">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="chart" data-percent="75">
+                                            <span class="percent" style="color:#f2fc6f;">75</span>
+                                            <h4>HTML/CSS/JAVASCRIPT</h4>
+                                            <p>
+                                                A wide range of skills to make responsive websites. Passionate about building
+                                                highly beautiful and highly interactive websites.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div
+    class="vc_row wpb_row vc_row-fluid make-margin-bottom-zero vc_custom_1442957040306 vc_row-has-fill">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner ">
+            <div class="wpb_wrapper">
+                <div
+                    class="homepage-container-design   "
+                    style="background-image:url();color:#333232;background-repeat:repeat; padding-top:27px; padding-bottom:30px; background-size:cover; background-position:top center;">
+                    <div class="homepage-container-design-inner">
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-6">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <ul style="background: none repeat scroll 0 0 #d9f170;
+                                        border-radius: 6px;
+                                        margin-bottom: 20px;">
+                                            <li>
+                                                <div class="skillBg">
+                                                    <span data-width="90">
+                                                        <strong style="color:#333232;">Creative 90%</strong>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul style="background: none repeat scroll 0 0 #d9f170;
+                                        border-radius: 6px;
+                                        margin-bottom: 20px;">
+                                            <li>
+                                                <div class="skillBg">
+                                                    <span data-width="70">
+                                                        <strong  style="color:#333232;">Leadership 90%</strong>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul style="background: none repeat scroll 0 0 #d9f170;
+                                        border-radius: 6px;
+                                        margin-bottom: 20px;">
+                                            <li>
+                                                <div class="skillBg">
+                                                    <span data-width="90">
+                                                        <strong style="color:#333232;">Interpersonal Communication 90%</strong>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-6">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <ul style="background: none repeat scroll 0 0 #d9f170;
+                                        border-radius: 6px;
+                                        margin-bottom: 20px;">
+                                            <li>
+                                                <div class="skillBg">
+                                                    <span data-width="80">
+                                                        <strong style="color:#333232;">Team-working 90%</strong>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul style="background: none repeat scroll 0 0 #d9f170;
+                                        border-radius: 6px;
+                                        margin-bottom: 20px;">
+                                            <li>
+                                                <div class="skillBg">
+                                                    <span data-width="85">
+                                                        <strong style="color:#333232;">English 90%</strong>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul style="background: none repeat scroll 0 0 #bbf13d;
+                                        border-radius: 6px;
+                                        margin-bottom: 20px;">
+                                            <li>
+                                                <div class="skillBg">
+                                                    <span data-width="100">
+                                                        <strong style="color:#333232;">Chinese 100%</strong>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+        <!-- Skills end -->
+
+             
+        <!-- ===================================================================== -->
+
+       
+
+        <!-- education begin -->
+            <div
+    class="vc_row wpb_row vc_row-fluid make-margin-bottom-zero vc_custom_1442957151209 vc_row-has-fill">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner ">
+            <div class="wpb_wrapper">
+                <div id="resume"></div>
+                <div
+                    class="homepage-container-design   "
+                    style="background-image:url();color:#666666;background-repeat:repeat; padding-top:50px; padding-bottom:25px; background-size:cover; background-position:top center;">
+                    <div class="homepage-container-design-inner">
+                        <div class="section-title  text-center">
+                            <h1 style="color:#474d5d;">MY
+                                <span style="background-color:#474d5d;">RESUME</span>
+                            </h1>
+                        </div>
+
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <ul class="timeline resume-timeline list-unstyled">
+
+                                            <li class="title">My Education</li>
+                                            <li class="note">
+                                                <h3>Shanghai University</h3>
+                                                <h4>BE | Majoring in Software Engineering
+                                                </h4>
+                                                <p class="desc"  style="font-size: 16px; color:#333333">
+                                                    Awarded university scholarships four times.<br>
+                                                        The head of the Art department.<br>
+                                                            Volunteer of the university.
+                                                        </p>
+                                                        <span class="date">2009 - 2013</span>
+                                                        <span class="arrow fa fa-play"></span>
+                                                    </li>
+                                                    <li class="note">
+                                                        <h3>University of Pittsburgh</h3>
+                                                        <h4>
+                                                            MS | Majoring in Information Science
+                                                        </h4>
+                                                        <p class="desc"  style="font-size: 16px; color:#333333">
+                                                            Outstanding results throughout the years with GPA over 3.8/4.0.
+                                                        </p>
+                                                        <span class="date">2019 - PRESENT</span>
+                                                        <span class="arrow fa fa-play"></span>
+                                                    </li>
+                                                    <li class="start fa fa-bookmark"></li>
+                                                    <li class="clear"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- education end -->
+               
+        
+        <!-- ===================================================================== -->
+        
+        <!-- Experience  begin-->
+
+          <div
+    class="vc_row wpb_row vc_row-fluid make-margin-bottom-zero vc_custom_1442957123992 vc_row-has-fill">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner ">
+            <div id="Experience" class="wpb_wrapper">
+                <div
+                    class="homepage-container-design   "
+                    style="background-image:url();color:#666666;background-repeat:repeat; padding-top:70px; padding-bottom:30px; background-size:cover; background-position:top center;">
+                    <div class="homepage-container-design-inner">
+
+                        <div class="section-title  text-center">
+                            <h1 style="color: #ffffff;">MY
+                                <span style="background-color: rgba(239,239,239,0.6);">PROFESSIONAL EXPERIENCE</span>
+                            </h1>
+                        </div>
+
+                        <div class="section-title  text-center">
+                            <h2 style="color: #ffffff;">
+                                <span style="background-color: rgba(239,239,239,0.6);">HAND Enterprise Solutions Co. Ltd. - Senior Technical Consultant</span>
+                            </h2>
+                            <h2 style="color: #ffffff;">
+                                <span style="background-color: rgba(239,239,239,0.6);"></span>Mar 2013 - Aug 2019</h2>
+
+                        </div>
+
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <ul class="timeline resume-timeline list-unstyled">
+
+                                            <li class="title">PROJECTS</li>
+                                            <li class="note" style="background:rgba(242, 242, 242, 0.9);">
+                                                <h4>Air China | Warehouse System Redesigned and Integration</h4>
+                                                <h5>Technical director/ Senior Technical Consultant</h5>
+                                                <p class="desc" style="font-size: 16px; color:#333333">
+                                                    · Speeded up the inventory transactions and settlements of the warehouse
+                                                    management system by redesigned system procedures with Java and PL/SQL.<br>
+                                                        · Developed and redesigned interfaces of legacy systems such as the BI system,
+                                                        WeChat, E-Banking system, Golden tax, and expense reimbursement system, etc.<br></p>
+                                                        <span class="date">Oct 2018 - Aug 2019</span>
+                                                        <span class="arrow fa fa-play"></span>
+                                                    </li>
+
+                                                    <li class="note" style="background:rgba(242, 242, 242, 0.9);">
+                                                        <h4>Air China | Single Sign On Implementation</h4>
+                                                        <h5>Technical director/ Senior Technical Consultant</h5>
+                                                        <p class="desc" style="font-size: 16px; color:#333333">
+                                                            · Developed the SSO token generation (string encrypted by MD5) and validation
+                                                            (Decode and verify the token) APIs with Java. Realized the access to all related
+                                                            systems by logging in only once.
+                                                        </p>
+                                                        <span class="date">Jun 2018 - Sep 2018</span>
+                                                        <span class="arrow fa fa-play"></span>
+                                                    </li>
+
+                                                    <li class="note" style="background:rgba(242, 242, 242, 0.9);">
+                                                        <h4>Peking University FOUNDER Group | EBS Financial System and Mobile Terminal Integration</h4>
+                                                        <h5>Senior Technical Consultant</h5>
+                                                        <p class="desc"  style="font-size: 16px; color:#333333">
+                                                            · Deployed DBWS and configured the integrated SOA Gateway. Developed web service
+                                                            APIs through the SOAP protocol with Java. Realized the data mutual transmission
+                                                            between EBS and mobile terminal.
+                                                        </p>
+                                                        <span class="date">Aug 2016 - Aug 2017</span>
+                                                        <span class="arrow fa fa-play"></span>
+                                                    </li>
+
+                                                    <li class="note" style="background:rgba(242, 242, 242, 0.9);">
+                                                        <h4>Panasonic | EBS Financial System Redesigned</h4>
+                                                        <h5>Technical Consultant</h5>
+                                                        <p class="desc" style="font-size: 16px; color:#333333">
+                                                            · Redesigned reports system and workflow by using Java and PL/SQL, improved data
+                                                            pipeline. This shortens monthly accounting closing time from 3 days to 6 hours.<br>
+                                                                · Developed and maintained APIs, reports ETL in a scalable way. Optimized forms
+                                                                and OAF through PL/SQL, Report builder, Form builder, and Workflow.
+                                                            </p>
+                                                            <span class="date">Jul 2013 - Jul 2016</span>
+                                                            <span class="arrow fa fa-play"></span>
+                                                        </li>
+
+                                                        <li class="start fa fa-bookmark"></li>
+                                                        <li class="clear"></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        <!-- Experience  end-->
+    
+        <!-- ===================================================================== -->
+
+        <!-- Process  begin-->
+
+    <div
+    class="vc_row wpb_row vc_row-fluid make-margin-bottom-zero vc_custom_1442957151209 vc_row-has-fill">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner ">
+            <div class="wpb_wrapper">
+                <div id="process"></div>
+                <div
+                    class="homepage-container-design   "
+                    style="background-image:url();color:#666666;background-repeat:repeat; padding-top:50px; padding-bottom:84px; background-size:cover; background-position:top center;">
+                    <div class="homepage-container-design-inner">
+                        <div class="section-title text-center">
+                            <h1 style="color: #474d5d;">MY
+                                <span style="background-color: #474d5d;">PROCESS</span>
+                            </h1>
+                        </div>
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <ol class="process-flow list-unstyled">
+                                            <li class="active" style="color:#474d5d;">
+                                                <div class="process-node active">
+                                                    <i class="fa fa-comments"></i>
+                                                </div>
+                                                <h3 style="color:#474d5d;">Discussion</h3>
+                                                <p>
+                                                    Examine the feasibility of the project. Outline the objectives, the results and
+                                                    how to achieve them.
+                                                </p>
+                                                <div class="line">
+                                                    <div class="progress"></div>
+                                                </div>
+                                            </li>
+                                            <li class="active" style="color:#474d5d;">
+                                                <div class="process-node active">
+                                                    <i class="fa fa-lightbulb-o"></i>
+                                                </div>
+                                                <h3 style="color:#474d5d;">Idea</h3>
+                                                <p>
+                                                    Ideas are explored and elaborated then reviewd to meet the criteria.
+                                                </p>
+                                                <div class="line">
+                                                    <div class="progress"></div>
+                                                </div>
+                                            </li>
+                                            <li class="active" style="color:#474d5d;">
+                                                <div class="process-node active">
+                                                    <i class="fa fa-desktop"></i>
+                                                </div>
+                                                <h3 style="color:#474d5d;">Implementation</h3>
+                                                <p>
+                                                    Construct and execute the project to get results in a well-organised way.
+                                                </p>
+                                                <div class="line">
+                                                    <div class="progress"></div>
+                                                </div>
+                                            </li>
+                                            <li class="active" style="color:#474d5d;">
+                                                <div class="process-node active">
+                                                    <i class="fa fa-flash"></i>
+                                                </div>
+                                                <h3 style="color:#474d5d;">Review</h3>
+                                                <p>
+                                                    Project is completed and ready to be delivered to the client.
+                                                </p>
+
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                
+        <!-- Process end -->
+               
+        
+        <!-- ===================================================================== -->
+        
+
+         <!-- Freelancer begin -->
+<div
+class="vc_row wpb_row vc_row-fluid make-margin-bottom-zero vc_custom_1442957123992 vc_row-has-fill">
+<div class="wpb_column vc_column_container vc_col-sm-12">
+    <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+            <div
+                class="homepage-container-design   "
+                style="background-image:url();color:#666666;background-repeat:repeat; padding-top:70px; padding-bottom:30px; background-size:cover; background-position:top center;">
+                <div class="homepage-container-design-inner">
+                    <div
+                        class="vc_row wpb_row vc_inner vc_row-fluid make-text-align-center vc_custom_1416738722275">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="wpb_text_column wpb_content_element  make-margin-bottom-zero">
+                                        <div class="wpb_wrapper">
+                                            <h1 class="white padBottom killMargin">I am available for
+                                                <strong>Freelancer</strong>
+                                            </h1>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="vc_row wpb_row vc_inner vc_row-fluid make-text-align-center make-button-margin">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <a
+                                        href="#"
+                                        class="btn identity-hover-button"
+                                        style="color:#ffffff; background-color: rgba(0,0,0,0.01); border: 2px solid #ffffff;">HIRE ME</a>
+                                    <a
+                                        target="_blank"
+                                        href="#"
+                                        class="btn btn-primary btn-lg identity-hover-button"
+                                        style="color:#ffffff; background-color: #428bca; border: 2px solid #357ebd;">
+                                        <img
+                                            src="https://res.cloudinary.com/dch9d6ecr/image/upload/v1486881254/Logomakr_2pKBtG_xsultr.png"
+                                            class="fa fa-download"></img>
+                                        Download Resume</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <!-- Freelancer end -->
+        
+        
+    <!-- ===================================================================== -->
+        <!-- Contact  begin-->   
+                                <div
+    class="vc_row wpb_row vc_row-fluid make-margin-bottom-zero vc_custom_1450396522267 vc_row-has-fill">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner vc_custom_1450395829266">
+            <div class="wpb_wrapper">
+                <div id="contact"></div>
+                <div
+                    class="homepage-container-design   "
+                    style="background-image:url();color:#666666;background-repeat:repeat; padding-top:50px; padding-bottom:25px; background-size:cover; background-position:top center;">
+                    <div class="homepage-container-design-inner">
+                        <div class="section-title  text-center">
+                            <h1 style="color:#474d5d;">GET IN
+                                <span style="background-color:#474d5d;">TOUCH</span>
+                            </h1>
+                        </div>
+
+                        <div class="wpb_text_column wpb_content_element ">
+                            <div class="wpb_wrapper">
+                                <h4 class="text-center">Drop me a Line</h4>
+
+                            </div>
+                        </div>
+                        <div role="form" class="wpcf7" id="wpcf7-f12-p21-o1" lang="en-US" dir="ltr">
+                            <div class="screen-reader-response"></div>
+                            <form
+                                action="/identity-vcard/?page_id=21#wpcf7-f12-p21-o1"
+                                method="post"
+                                class="wpcf7-form"
+                                novalidate="novalidate">
+                                <div style="display: none;">
+                                    <input type="hidden" name="_wpcf7" value="12"/>
+                                    <input type="hidden" name="_wpcf7_version" value="4.6.1"/>
+                                    <input type="hidden" name="_wpcf7_locale" value="en_US"/>
+                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f12-p21-o1"/>
+                                    <input type="hidden" name="_wpnonce" value="712f87b088"/>
+                                </div>
+                                <p class="identity-contact">
+                                    <span class="wpcf7-form-control-wrap your-name"><input
+                                        type="text"
+                                        name="your-name"
+                                        value=""
+                                        size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                        aria-required="true"
+                                        aria-invalid="false"
+                                        placeholder="Name"/></span>
+                                </p>
+                                <p class="identity-contact">
+                                    <span class="wpcf7-form-control-wrap your-email"><input
+                                        type="email"
+                                        name="your-email"
+                                        value=""
+                                        size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                        aria-required="true"
+                                        aria-invalid="false"
+                                        placeholder="Email"/></span>
+                                </p>
+                                <p class="identity-contact">
+                                    <span class="wpcf7-form-control-wrap your-phone"><input
+                                        type="text"
+                                        name="your-phone"
+                                        value=""
+                                        size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                        aria-required="true"
+                                        aria-invalid="false"
+                                        placeholder="Phone"/></span>
+                                </p>
+                                <p class="identity-contact">
+                                    <span class="wpcf7-form-control-wrap your-area">
+                                        <textarea
+                                            name="your-area"
+                                            cols="40"
+                                            rows="10"
+                                            class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                            aria-required="true"
+                                            aria-invalid="false"
+                                            placeholder="Enter Message"></textarea>
+                                    </span>
+                                </p>
+                                <p class="identity-contact"><input type="submit" value="SUBMIT" class="wpcf7-form-control wpcf7-submit"/></p>
+
+                            </div>
+
+                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<!-- Contact end -->
+       
+
+<!-- ===================================================================== -->
+
+
+			
+			</div>				
+		</div>
+	</div>
+			
+        
+        <!-- ===================================================================== -->
+
+ 
+
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/jquery/ui/dialog.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/wpdialog.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6.1'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/jquery.visible.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/prof.common.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/retina.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/scripts-top.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/scripts-bottom.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/bootstrap.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/jquery.isotope.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/jquery.sticky.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/jquery.nicescroll.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/jquery.flexslider.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/jquery.validate.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='//maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/gmap-settings.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/identity/script.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/themes/Identity-vcard/js/numinate.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-includes/js/wp-embed.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://themes.profteamsolutions.com/identity-vcard/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.9'></script>
+</body>
+</html>

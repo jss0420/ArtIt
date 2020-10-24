@@ -1,0 +1,19 @@
+.customtable {
+  display:flex;
+  justify-content:space-between;
+}
+div.tp-rightarrow {
+  content:url(https://res.cloudinary.com/dch9d6ecr/image/upload/v1486838076/Logomakr_8lInAg_fbvzch.png);
+}
+div.tp-leftarrow {
+  content:url(https://res.cloudinary.com/dch9d6ecr/image/upload/v1486838410/Logomakr_4YR5YG_gyn5m5.png);
+}
+span.fa-briefcase{
+  content:url(https://res.cloudinary.com/dch9d6ecr/image/upload/v1486880425/Logomakr_4QV9NB_b9mp0r.png);
+}
+span.fa-bar-chart-o{
+  content:url(https://res.cloudinary.com/dch9d6ecr/image/upload/v1486880686/Logomakr_3fLffX_a5cjsi.png);
+}
+span.fa-book{
+  content:url(https://res.cloudinary.com/dch9d6ecr/image/upload/v1486881589/Logomakr_56bcZX_xfqsq4.png);
+}
